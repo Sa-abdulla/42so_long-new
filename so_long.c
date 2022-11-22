@@ -6,7 +6,7 @@
 /*   By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:28:47 by sabdulla          #+#    #+#             */
-/*   Updated: 2022/11/22 02:31:07 by sabdulla         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:35:50 by sabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	exit_me_please(t_maps *map)
 	mlx_destroy_image(map->mlx, map->wall_p);
 	mlx_destroy_window(map->mlx, map->win);
 	my_free(map);
-	exit(0);
+	exit(EXIT_SUCCESS);
 }
 
 int	main(int ac, char **av)
@@ -69,20 +69,20 @@ int	main(int ac, char **av)
 
 	if (ac != 2)
 	{
-		ft_printf ("wrong number of arguments \n");
-		return (0);
+		ft_printf ("ERROR: wrong number of arguments \n");
+		return (EXIT_FAILURE);
 	}
 	init_struct(&map);
 	if (ft_check_exten(av[1], &map) == 0)
 	{
-		ft_printf ("wrong extension file \n");
-		return (0);
+		ft_printf ("ERROR: wrong extension file \n");
+		return (EXIT_FAILURE);
 	}
 	if (ft_read_maps(av[1], &map) == 0
 		|| check_valid_map(&map) == 0 || check_valid_coin(&map) == 0)
 	{
-		ft_printf ("invalid map \n");
-		return (0);
+		ft_printf ("ERROR: invalid map/path \n");
+		return (EXIT_FAILURE);
 	}
 	start_game(&map);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 02:08:54 by sabdulla          #+#    #+#             */
-/*   Updated: 2022/11/22 14:34:54 by sabdulla         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:40:27 by sabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	go_left(t_maps *map)
 		map->space, map->px, map->py);
 	mlx_put_image_to_window(map->mlx, map->win,
 		map->player, map->px, map->py);
-	map->p_move++;
-	ft_printf("%d\n", map->p_move);
+	map->nu_moves++;
+	ft_printf("%d\n", map->nu_moves);
 }
 
 void	go_down(t_maps *map)
@@ -56,8 +56,8 @@ void	go_down(t_maps *map)
 		map->space, map->px, map->py);
 	mlx_put_image_to_window(map->mlx, map->win,
 		map->player, map->px, map->py);
-	map->p_move++;
-	ft_printf("%d\n", map->p_move);
+	map->nu_moves++;
+	ft_printf("%d\n", map->nu_moves);
 }
 
 void	go_right(t_maps *map)
@@ -80,8 +80,8 @@ void	go_right(t_maps *map)
 		map->space, map->px, map->py);
 	mlx_put_image_to_window(map->mlx, map->win,
 		map->player, map->px, map->py);
-	map->p_move++;
-	ft_printf("%d\n", map->p_move);
+	map->nu_moves++;
+	ft_printf("%d\n", map->nu_moves);
 }
 
 void	go_up(t_maps *map)
@@ -100,8 +100,8 @@ void	go_up(t_maps *map)
 	map->map[map->py / 64][map->px / 64] = 'P';
 	mlx_put_image_to_window(map->mlx, map->win, map->space, map->px, map->py);
 	mlx_put_image_to_window(map->mlx, map->win, map->player, map->px, map->py);
-	map->p_move++;
-	ft_printf("%d\n", map->p_move);
+	map->nu_moves++;
+	ft_printf("%d\n", map->nu_moves);
 }
 
 int	exit_game(int key, t_maps *map)

@@ -6,7 +6,7 @@
 /*   By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:30:06 by sabdulla          #+#    #+#             */
-/*   Updated: 2022/11/22 14:29:45 by sabdulla         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:40:27 by sabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@
 # include <stdio.h>
 # include <unistd.h>
 
-typedef struct mp{
+typedef struct s_maps{
 	char	**map;
 	char	*files;
-	int		weidth;
-	int		height;
 	int		p;
 	int		px;
 	int		py;
@@ -35,7 +33,7 @@ typedef struct mp{
 	int		h;
 	int		w;
 	int		exit_flag;
-	int		p_move;
+	int		nu_moves;
 	int		hash_map[255][255];
 	void	*mlx;
 	void	*win;

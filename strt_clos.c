@@ -6,7 +6,7 @@
 /*   By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:28:02 by sabdulla          #+#    #+#             */
-/*   Updated: 2022/11/22 14:34:29 by sabdulla         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:28:32 by sabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 int	close_win(t_maps *map)
 {
 	ft_printf("map was too hard for you:)\n");
+	mlx_destroy_image(map->mlx, map->coin);
+	mlx_destroy_image(map->mlx, map->exit);
+	mlx_destroy_image(map->mlx, map->space);
+	mlx_destroy_image(map->mlx, map->wall_p);
 	mlx_destroy_window(map->mlx, map->win);
+	my_free(map);
 	exit(0);
 }
 

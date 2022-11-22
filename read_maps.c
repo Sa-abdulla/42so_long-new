@@ -6,7 +6,7 @@
 /*   By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 22:41:08 by sabdulla          #+#    #+#             */
-/*   Updated: 2022/11/21 23:34:06 by sabdulla         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:29:32 by sabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,11 @@ int	ft_read_maps(char *str, t_maps *map)
 		str = get_next_line(fd);
 	}
 	err = check_all(st, map);
+	if (map->w >= 100 || map->h >= 100)
+	{
+		ft_printf ("ERROR: big map \n");
+		my_free(map);
+		exit(EXIT_FAILURE);
+	}
 	return (err);
 }
