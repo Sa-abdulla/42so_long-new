@@ -6,7 +6,7 @@
 /*   By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:30:06 by sabdulla          #+#    #+#             */
-/*   Updated: 2022/11/22 02:41:57 by sabdulla         ###   ########.fr       */
+/*   Updated: 2022/11/22 14:29:45 by sabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int		check_valid_coin(t_maps *map);
 int		check_valid_map(t_maps *map);
 int		check_nav(t_maps *map, int x, int y);
 int		exit_game(int key, t_maps *map);
+int		close_win(t_maps *map);
 void	init_struct(t_maps *map);
 void	go_up(t_maps *map);
 void	go_right(t_maps *map);

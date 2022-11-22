@@ -6,7 +6,7 @@
 /*   By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 02:06:55 by sabdulla          #+#    #+#             */
-/*   Updated: 2022/11/22 02:16:06 by sabdulla         ###   ########.fr       */
+/*   Updated: 2022/11/22 14:30:45 by sabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,19 +63,4 @@ void	print_map(t_maps *map)
 				put_player(map, i, j);
 		}
 	}
-}
-
-void	start_game(t_maps *map)
-{
-	int	w;
-	int	h;
-
-	w = map->w * 64;
-	h = map->h * 64;
-	map->mlx = mlx_init();
-	map->win = mlx_new_window(map->mlx, w, h, "so_long");
-	open_xpm(map);
-	print_map(map);
-	mlx_hook(map->win, 2, 1L << 0, exit_game, map);
-	mlx_loop(map->mlx);
 }

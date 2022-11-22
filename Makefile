@@ -6,12 +6,12 @@
 #    By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 19:29:50 by sabdulla          #+#    #+#              #
-#    Updated: 2022/11/22 02:50:12 by sabdulla         ###   ########.fr        #
+#    Updated: 2022/11/22 14:29:29 by sabdulla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC	= so_long.c read_maps.c check_coin.c check_maps.c check_path.c \
-		print_maps.c moves.c
+		print_maps.c moves.c strt_clos.c
 
 OBJS	= $(SRC:.c=.o)
 

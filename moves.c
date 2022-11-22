@@ -6,7 +6,7 @@
 /*   By: sabdulla <sabdulla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 02:08:54 by sabdulla          #+#    #+#             */
-/*   Updated: 2022/11/22 02:16:50 by sabdulla         ###   ########.fr       */
+/*   Updated: 2022/11/22 14:34:54 by sabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,10 @@ void	go_up(t_maps *map)
 int	exit_game(int key, t_maps *map)
 {
 	if (key == 53)
+	{
+		ft_printf("map was too hard for you:)\n");
 		exit_me_please(map);
+	}
 	if (key == 0)
 		go_left(map);
 	if (key == 1)
